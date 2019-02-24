@@ -1,0 +1,52 @@
+.Header {
+    /* fix the bar */
+    position: fixed;
+    /* since we're rotating, set its width to the screen height */
+    width: 100vh; 
+    bottom: 0;
+    /* position to the left by the total width of the container(padding + line-height  but keep some outside the viewport for transition*/
+    left: 90px; 
+    /* rotate 90deg clockwise */
+     transform: rotate(-90deg);  
+     /* use the bottom-right as rotation point */
+     transform-origin: bottom left;
+    
+    background-color: white;
+    z-index: 100;
+
+    transition: 1s; 
+    animation: HeaderAnimationOUT 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.Header:hover {
+    background:pink; 
+    animation: HeaderAnimationIN 1s forwards cubic-bezier(0.075, 0.82, 0.165, 1);  
+}
+
+.HeaderGroup {
+     /*  determines the total height of the container  */
+    font-size: 50px; 
+    line-height: 1;
+    padding: 30px 20px 20px 20px; 
+    /* align items */
+    align-items: baseline; 
+}
+
+/* align the arrow to the top */
+.Symbol {
+    float: right;
+}
+
+
+@keyframes HeaderAnimationIN {
+    from {left: 90px;}
+    to {left: 100px;}
+}
+
+@keyframes HeaderAnimationOUT {
+    from {left: 100px;}
+    to {left: 90px;}
+}
+  
+
