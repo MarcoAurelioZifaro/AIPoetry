@@ -1,3 +1,8 @@
+/* Change to grid layout with fr units!! 
+grid-display-columns: 1fr 1fr; 
+align-self: end;
+*/
+
 .Header {
     /* fix the bar */
     position: fixed;

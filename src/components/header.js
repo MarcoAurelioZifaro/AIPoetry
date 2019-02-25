@@ -5,9 +5,11 @@ import './header.css'
 
 const Header = ({ siteTitle }) => (
   <div className= "Header">
-    <div className ="HeaderGroup">
-      <span>Write a new poem</span><span className="Symbol">&uarr;</span>
-    </div>
+    <Link to="/">
+      <div className ="HeaderGroup">
+        <span>Write a new poem</span><span className="Symbol">&uarr;</span>
+     </div>
+    </Link>
     <Link to="/page-2"></Link>
 </div>
 )
@@ -19,5 +21,6 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
 
 export default Header

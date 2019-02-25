@@ -1,0 +1,24 @@
+.PoemSingle { 
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: max-content auto; 
+    width: 600px;
+    border-top: 1px solid white; 
+    padding-top: 20px;
+}
+
+.PoemSingle .poem {
+    grid-row-start:1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+
+}
+
+.PoemSingle p {
+    font-size: 12.5px; 
+    color: white;
+    margin: 0; 
+    line-height: 1.3;
+    align-items: baseline;
+
+}
